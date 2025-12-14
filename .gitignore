@@ -1,0 +1,56 @@
+# Binaries and executables
+*.exe
+*.dll
+*.so
+*.dylib
+bin/
+dist/
+
+# Go
+*.test
+*.out
+go.work
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+logs/
+
+# FreeSWITCH runtime files
+freeswitch/conf/log/
+freeswitch/conf/db/
+freeswitch/conf/storage/
+freeswitch/conf/recordings/
+freeswitch/conf/tls/*.pem
+freeswitch/conf/tls/*.key
+freeswitch/conf/tls/*.crt
+
+# Docker volumes
+volumes/
+
+# Environment variables (if you add sensitive data later)
+.env.local
+.env.*.local
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Coverage reports
+coverage.out
+coverage.html
+
+# Build artifacts
+*.o
+*.a
