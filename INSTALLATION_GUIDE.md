@@ -2,9 +2,8 @@
 
 > Complete step-by-step explanation of the installation process
 
-**Date:** December 14, 2024  
+
 **Project:** AI Voice IVR Platform  
-**Organization:** ARM EDUCATIONS (OPC) PRIVATE LIMITED
 
 ---
 
@@ -1351,8 +1350,6 @@ You are now ready to proceed with creating the project structure and building th
 ---
 
 **Document Version:** 1.0  
-**Last Updated:** December 14, 2024  
-**Author:** ARM EDUCATIONS Technical Team  
 **Status:** Installation Complete ✅
 
 ---
@@ -1645,8 +1642,6 @@ su`
 ---
 
 **Document Version:** 1.1  
-**Last Updated:** December 14, 2024  
-**Author:** ARM EDUCATIONS Technical Team  
 **Status:** Linphone & FreeSWITCH Installation Complete ✅
 
 ---

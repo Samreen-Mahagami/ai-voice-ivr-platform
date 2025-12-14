@@ -336,10 +336,6 @@ docker compose exec ollama ollama pull llama3
 - [ ] Mock data APIs
 - [ ] End-to-end testing
 
-## 🤝 Contributing
-
-This is an internship project for ARM EDUCATIONS (OPC) PRIVATE LIMITED.
-
 ### Development Guidelines
 
 1. Follow Go best practices and idioms
@@ -361,28 +357,6 @@ golangci-lint run
 go test ./... -v
 ```
 
-## 📝 License
-
-This project is developed as part of an internship program at ARM EDUCATIONS (OPC) PRIVATE LIMITED.
-
-## 👥 Authors
-
-- **Intern Name** - Initial development
-- **ARM EDUCATIONS** - Project supervision
-
-## 🙏 Acknowledgments
-
-- OpenAI Whisper team for ASR technology
-- Ollama team for local LLM deployment
-- Piper TTS project for speech synthesis
-- FreeSWITCH community for telephony infrastructure
-
-## 📧 Contact
-
-For questions or support:
-- **Organization:** ARM EDUCATIONS (OPC) PRIVATE LIMITED
-- **Project Type:** Internship Project
-- **Duration:** 11-12 weeks
 
 ## 🔗 Resources
 
@@ -394,5 +368,3 @@ For questions or support:
 - [Piper TTS Documentation](https://github.com/rhasspy/piper)
 
 ---
-
-**Built with ❤️ for ARM EDUCATIONS Internship Program**

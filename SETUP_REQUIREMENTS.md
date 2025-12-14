@@ -375,19 +375,6 @@ sudo apt-get install -y jq
 
 ---
 
-## Estimated Installation Time
-
-- **Go:** 5 minutes
-- **Docker:** 10 minutes
-- **Git, Make, curl:** 5 minutes
-- **VS Code:** 5 minutes
-- **Softphone:** 5 minutes
-- **Docker Images (first pull):** 30-60 minutes (depending on internet speed)
-
-**Total:** ~1-1.5 hours
-
----
-
 ## Troubleshooting
 
 ### Docker Permission Denied
@@ -433,10 +420,8 @@ After completing this setup:
 - **Go Documentation:** https://go.dev/doc/
 - **Docker Documentation:** https://docs.docker.com/
 - **FreeSWITCH Documentation:** https://freeswitch.org/confluence/
-- **Project Document:** Refer to main internship project document
+- **Project Document:** Refer to main project documentation
 
 ---
 
 **Document Version:** 1.0  
-**Last Updated:** December 2024  
-**For:** ARM EDUCATIONS AI Voice IVR Platform
