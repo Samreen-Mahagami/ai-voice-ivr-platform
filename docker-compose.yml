@@ -12,6 +12,7 @@ services:
       - "16384-16394:16384-16394/udp"  # RTP ports (reduced range for testing)
     environment:
       - FREESWITCH_HOSTNAME=freeswitch
+      - EXTERNAL_IP=localhost
     volumes:
       - ./freeswitch/conf:/etc/freeswitch:rw
     networks:
