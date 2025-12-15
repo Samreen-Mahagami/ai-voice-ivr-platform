@@ -193,11 +193,7 @@ sudo apt-get install -y linphone
 linphone
 ```
 
-**Option B: Zoiper**
-- Download from: https://www.zoiper.com/en/voip-softphone/download/current
-- Install the .deb package
-
-**Option C: MicroSIP (Windows only)**
+**Option B: MicroSIP (Windows only)**
 - Not available for Linux
 
 ---
@@ -375,6 +371,19 @@ sudo apt-get install -y jq
 
 ---
 
+## Estimated Installation Time
+
+- **Go:** 5 minutes
+- **Docker:** 10 minutes
+- **Git, Make, curl:** 5 minutes
+- **VS Code:** 5 minutes
+- **Softphone:** 5 minutes
+- **Docker Images (first pull):** 30-60 minutes (depending on internet speed)
+
+**Total:** ~1-1.5 hours
+
+---
+
 ## Troubleshooting
 
 ### Docker Permission Denied
@@ -420,8 +429,7 @@ After completing this setup:
 - **Go Documentation:** https://go.dev/doc/
 - **Docker Documentation:** https://docs.docker.com/
 - **FreeSWITCH Documentation:** https://freeswitch.org/confluence/
-- **Project Document:** Refer to main project documentation
+- **Project Document:** Refer to main internship project document
 
 ---
 
-**Document Version:** 1.0  
