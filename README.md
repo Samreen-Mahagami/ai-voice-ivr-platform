@@ -92,7 +92,7 @@ docker compose ps
 ```
 
 5. **Configure your softphone**
-- SIP Server: `localhost:5060`
+- SIP Server: `localhost:5080`
 - Username: `1000`
 - Password: `1234`
 
@@ -153,7 +153,7 @@ ai-voice-ivr/
 
 | Layer | Technology | Purpose |
 |-------|-----------|---------|
-| **Telephony** | FreeSWITCH | PBX, SIP/RTP handling |
+| **Telephony** | Asterisk | PBX, SIP/RTP handling |
 | **Orchestration** | Go 1.22+ | Bot logic, service coordination |
 | **ASR** | OpenAI Whisper | Speech-to-text |
 | **LLM** | Ollama + Llama3 | Intent classification, responses |
@@ -254,7 +254,7 @@ go tool cover -html=coverage.out
 
 | Service | Port | Protocol | Purpose |
 |---------|------|----------|---------|
-| FreeSWITCH SIP | 5060 | TCP/UDP | SIP signaling |
+| Asterisk SIP | 5080 | TCP/UDP | SIP signaling |
 | FreeSWITCH ESL | 8021 | TCP | Event Socket Layer |
 | FreeSWITCH RTP | 16384-16484 | UDP | Audio streaming |
 | Bot Orchestrator HTTP | 8090 | TCP | REST API |
@@ -268,11 +268,14 @@ go tool cover -html=coverage.out
 
 ### Softphone won't register
 ```bash
-# Check FreeSWITCH logs
-docker compose logs freeswitch
+# Check Asterisk logs
+docker logs asterisk
 
-# Verify SIP profile is running
-docker compose exec freeswitch fs_cli -x "sofia status"
+# Verify SIP endpoints are configured
+docker exec asterisk asterisk -rx "pjsip show endpoints"
+
+# Check SIP transports
+docker exec asterisk asterisk -rx "pjsip show transports"
 ```
 
 ### No audio in calls
@@ -307,14 +310,17 @@ docker compose exec ollama ollama pull llama3
 ## 🎯 Development Roadmap
 
 ### Phase 1: Foundation ✅
-- [x] Environment setup
+- [x] Environment setup (Go 1.22, Docker, development tools)
 - [x] Docker Compose configuration
-- [x] FreeSWITCH basic setup
+- [x] Asterisk SIP server deployment
+- [x] SIP endpoint configuration and testing
+- [x] Documentation and setup guides
 
 ### Phase 2: Telephony ✅
-- [x] SIP registration
-- [x] Call handling
-- [x] Audio bridging
+- [x] SIP server running on port 5080
+- [x] SIP authentication working (user 1000)
+- [x] SIP connectivity verified with testing tools
+- [x] Ready for voice call handling
 
 ### Phase 3: Bot Core 🚧
 - [ ] ESL client
