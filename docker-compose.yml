@@ -3,22 +3,10 @@ services:
     image: safarov/freeswitch:latest
     container_name: freeswitch
     hostname: freeswitch
-    ports:
-      - "5060:5060/tcp"      # SIP TCP
-      - "5060:5060/udp"      # SIP UDP
-      - "5080:5080/tcp"      # SIP TLS TCP
-      - "5080:5080/udp"      # SIP TLS UDP
-      - "8021:8021/tcp"      # ESL (Event Socket Layer)
-      - "16384-16394:16384-16394/udp"  # RTP ports (reduced range for testing)
+    network_mode: host
     environment:
       - FREESWITCH_HOSTNAME=freeswitch
       - EXTERNAL_IP=localhost
     volumes:
       - ./freeswitch/conf:/etc/freeswitch:rw
-    networks:
-      - ivr-network
     restart: unless-stopped
-
-networks:
-  ivr-network:
-    driver: bridge
