@@ -1,12 +1,10 @@
 services:
-  freeswitch:
-    image: safarov/freeswitch:latest
-    container_name: freeswitch
-    hostname: freeswitch
-    network_mode: host
-    environment:
-      - FREESWITCH_HOSTNAME=freeswitch
-      - EXTERNAL_IP=localhost
-    volumes:
-      - ./freeswitch/conf:/etc/freeswitch:rw
+  asterisk:
+    image: andrius/asterisk:latest
+    container_name: asterisk
+    hostname: asterisk
+    ports:
+      - "5080:5080/udp"
+      - "5080:5080/tcp"
+      - "10000-10099:10000-10099/udp"
     restart: unless-stopped

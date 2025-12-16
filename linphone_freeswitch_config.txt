@@ -1,0 +1,12 @@
+# Add this to ~/.config/linphone/linphonerc
+
+[proxy_1]
+reg_proxy=<sip:localhost:5060;transport=udp>
+reg_identity=sip:1000@localhost
+realm=localhost
+reg_expires=600
+reg_sendregister=1
+publish=0
+avpf=0
+dial_escape_plus=0
+privacy=32768
