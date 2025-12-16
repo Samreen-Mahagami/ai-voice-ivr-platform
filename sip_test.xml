@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<!DOCTYPE scenario SYSTEM "sipp.dtd">
+
+<scenario name="Basic SIP test">
+  <send retrans="500">
+    <![CDATA[
+
+      REGISTER sip:localhost:5080 SIP/2.0
+      Via: SIP/2.0/UDP [local_ip]:[local_port];branch=[branch]
+      Max-Forwards: 70
+      To: <sip:1000@localhost:5080>
+      From: <sip:1000@localhost:5080>;tag=[pid]SIPpTag00[call_number]
+      Call-ID: [call_id]
+      CSeq: 1 REGISTER
+      Contact: <sip:1000@[local_ip]:[local_port]>
+      Authorization: Digest username="1000", realm="asterisk", nonce="", uri="sip:localhost:5080", response=""
+      Content-Length: 0
+
+    ]]>
+  </send>
+
+  <recv response="200" optional="false">
+  </recv>
+
+  <pause milliseconds="1000"/>
+
+</scenario>
